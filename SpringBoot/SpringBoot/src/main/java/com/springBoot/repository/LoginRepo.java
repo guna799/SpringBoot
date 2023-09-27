@@ -14,7 +14,9 @@ public interface LoginRepo extends JpaRepository<LogIn, String> {
 //	@Query(value = "SELECT COUNT(*) FROM LogIn WHERE userName = ?1 AND password = ?2",nativeQuery = true)
 	@Query(value = "SELECT COUNT(*) FROM LogIn WHERE userName = :userName AND password = :password",nativeQuery = true)
 	public int logIn(String userName, String password);
-	
+
+
+//      For Admin login 
 	@Query(value = "SELECT * FROM LogIn WHERE userName = :userName ",nativeQuery = true)
 	public LogIn LoginDetails(String userName);
 	

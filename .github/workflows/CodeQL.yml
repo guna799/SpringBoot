@@ -23,7 +23,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.TOKEN }} # Use a PAT if accessing a different repo
-          ref: master # Ensure this matches the correct branch
+          ref: Main
  
       - name: List files in repo
         run: ls -R
